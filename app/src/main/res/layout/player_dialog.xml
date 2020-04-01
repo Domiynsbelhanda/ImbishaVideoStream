@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            app:shutter_background_color="#000000"
+            android:background="#000000"
+            android:id="@+id/movie_exo_player"
+            ></com.google.android.exoplayer2.ui.PlayerView>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TITLE / "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:id="@+id/title_dialog"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artiste"
+                android:textSize="14dp"
+                android:textStyle="italic"
+                android:layout_marginRight="25dp"
+                android:id="@+id/artiste_dialog"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/download_dialog"
+                android:src="@drawable/ic_file_download_black_24dp"/>
+        </LinearLayout>
+
+</LinearLayout>

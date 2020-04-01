@@ -1,0 +1,2 @@
+rootProject.name='Imbisha Video Stream'
+include ':app'

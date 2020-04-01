@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_urbaine">
+
+    <fragment
+        android:id="@+id/navigation_urbaine"
+        android:name="cd.belhanda.imbishavideostream.ui.urbaine.urbaine_accueil"
+        android:label="URBAINE"
+        tools:layout="@layout/fragment_urbaine" />
+
+    <fragment
+        android:id="@+id/navigation_gospel"
+        android:name="cd.belhanda.imbishavideostream.ui.gospel.gospel_accueil"
+        android:label="GOSPEL"
+        tools:layout="@layout/fragment_gospel" />
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="cd.belhanda.imbishavideostream.ui.search.search"
+        android:label="SEARCH"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="cd.belhanda.imbishavideostream.ui.about.about"
+        android:label="ABOUT"
+        tools:layout="@layout/fragment_layout" />
+
+</navigation>

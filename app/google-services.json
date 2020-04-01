@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "843673329549",
+    "firebase_url": "https://imbisha-video-stream.firebaseio.com",
+    "project_id": "imbisha-video-stream",
+    "storage_bucket": "imbisha-video-stream.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843673329549:android:0e9224c1e150c7ea1167c4",
+        "android_client_info": {
+          "package_name": "cd.belhanda.imbishavideostream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843673329549-4jujlvi1p8bp8cfl8fb0ijmaetv6ppjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cd.belhanda.imbishavideostream",
+            "certificate_hash": "839f0f800631ccd25daf5458e7611e77561d35e2"
+          }
+        },
+        {
+          "client_id": "843673329549-vogf0v8sjqq0hti5f9qd4hds41kcbvd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggIoiKvsYDv-oszzG3FKiYOaAXhLvkBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843673329549-vogf0v8sjqq0hti5f9qd4hds41kcbvd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

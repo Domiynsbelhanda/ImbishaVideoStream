@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.urbaine.urbaine_accueil">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slider_pager"
+        android:layout_width="0dp"
+        android:layout_height="275dp" />
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabGravity="center"
+        android:id="@+id/indicator"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabIndicatorHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider_pager">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_urbaine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
