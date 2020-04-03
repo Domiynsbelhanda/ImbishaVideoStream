@@ -52,6 +52,8 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import at.huber.youtubeExtractor.VideoMeta;
+import at.huber.youtubeExtractor.YouTubeExtractor;
 import at.huber.youtubeExtractor.YouTubeUriExtractor;
 import at.huber.youtubeExtractor.YtFile;
 import cd.belhanda.imbishavideostream.Adapters.DownloadClick;
@@ -181,40 +183,38 @@ public class gospel_accueil extends Fragment implements itemClick, DownloadClick
     public void onItemClick(Chanson chanson) {
         String youtubeLink = chanson.getUrl();
 
-        @SuppressLint("StaticFieldLeak") YouTubeUriExtractor ytEx = new YouTubeUriExtractor(getActivity()) {
+        new YouTubeExtractor(getActivity()){
+
             @Override
-            public void onUrisAvailable(String videoId, String videoTitle, SparseArray<YtFile> ytFiles) {
+            protected void onExtractionComplete(SparseArray<YtFile> ytFiles, VideoMeta videoMeta) {
                 if (ytFiles != null) {
-                    int itag = ytFiles.keyAt(0);;
+                    int itag = ytFiles.keyAt(0);
                     // Here you can get download url
                     String downloadUrl = ytFiles.get(itag).getUrl();
                     dialogconfig(downloadUrl, chanson);
 
                 }
             }
-        };
-
-        ytEx.execute(youtubeLink);
+        }.extract(youtubeLink, true, true);
     }
 
     @Override
     public void String_url(Chanson chanson) {
         String youtubeLink = chanson.getUrl();
 
-        @SuppressLint("StaticFieldLeak") YouTubeUriExtractor ytEx = new YouTubeUriExtractor(getActivity()) {
+        new YouTubeExtractor(getActivity()){
+
             @Override
-            public void onUrisAvailable(String videoId, String videoTitle, SparseArray<YtFile> ytFiles) {
+            protected void onExtractionComplete(SparseArray<YtFile> ytFiles, VideoMeta videoMeta) {
                 if (ytFiles != null) {
                     int itag = ytFiles.keyAt(0);
                     // Here you can get download url
-                    final String downloadUrl = ytFiles.get(itag).getUrl();
+                    String downloadUrl = ytFiles.get(itag).getUrl();
                     download_oklm(downloadUrl, chanson);
 
                 }
             }
-        };
-
-        ytEx.execute(youtubeLink);
+        }.extract(youtubeLink, true, true);
     }
 
     public void download_oklm(String down_url, Chanson chanson){

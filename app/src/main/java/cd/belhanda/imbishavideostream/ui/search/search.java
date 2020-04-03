@@ -111,9 +111,13 @@ public class search extends Fragment implements itemClick, DownloadClick {
 
                 String search = search_edit.getText().toString();
                 DatabaseReference reference;
-                reference= FirebaseDatabase.getInstance().getReference("Musique").child("Gospel");
-                reference.keepSynced(true);
 
+                if(choix.getSelectedItem().toString().equals("Gospel")){
+                    reference= FirebaseDatabase.getInstance().getReference("Musique").child("Gospel");
+                } else{
+                    reference= FirebaseDatabase.getInstance().getReference("Musique").child("Urbaine");
+                }
+                reference.keepSynced(true);
 
                 Query ref = reference
                         .orderByChild("titre")
